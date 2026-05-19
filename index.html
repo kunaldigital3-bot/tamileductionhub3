@@ -13,11 +13,18 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', ' 2136555250468519'); /* New Pixel ID updated */
+    
+    /* Galti Thik Ki: ID ke aage se space hata diya hai */
+    fbq('init', '2136555250468519'); 
     fbq('track', 'PageView');
+
+    /* Naya Function: Button click track karne ke liye */
+    function trackTelegramClick() {
+        fbq('track', 'Lead', {content_name: 'Telegram Join Button'});
+    }
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id= 2136555250468519&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=2136555250468519&ev=PageView&noscript=1"
     /></noscript>
     <style>
         body {
@@ -118,7 +125,8 @@
         <div>🎯 6+ Years Experience</div>
     </div>
 
-    <a href="https://t.me/+QO1J99kzVPYyYmU1" class="btn">
+    <!-- Galti Thik Ki: onclick="trackTelegramClick()" add kar diya hai -->
+    <a href="https://t.me/+QO1J99kzVPYyYmU1" class="btn" onclick="trackTelegramClick()">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="25" alt="TG Logo">
         Join Telegram
     </a>
